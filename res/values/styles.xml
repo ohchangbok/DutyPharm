@@ -1,0 +1,17 @@
+<resources>
+    <!-- style the items within the overflow menu -->
+    <style name="Theme" parent="style/Theme.Sherlock.Light">
+    </style>
+
+    <style name="Theme.Dialog" parent="style/Theme.Sherlock.Light.Dialog">
+    </style>
+
+    <style name="ProgressBarHolo.Small"
+           parent="android:Widget.ProgressBar.Small">
+        <item name="android:indeterminateDrawable">
+            @drawable/progress_small_holo
+        </item>
+        <item name="android:animationResolution">33</item>
+    </style>
+
+</resources>

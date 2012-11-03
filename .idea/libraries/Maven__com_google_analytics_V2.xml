@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.google:analytics:V2">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/analytics/V2/analytics-V2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/analytics/V2/analytics-V2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/analytics/V2/analytics-V2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

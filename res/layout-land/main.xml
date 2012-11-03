@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".DutyPhamActivity" >
+
+    <RelativeLayout
+        android:id="@+id/mapViewHolder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <!-- MapView should be here! -->
+
+        <TextView
+            android:id="@+id/current_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/abs__action_bar_default_height"
+            android:layout_toLeftOf="@+id/lists"
+            android:background="#5555"
+            android:padding="3dp"
+            android:text="@string/current_location"
+            android:textColor="#FFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/notification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="10dp"
+            android:layout_toLeftOf="@+id/lists"
+            android:background="@drawable/bg_notificatoin"
+            android:text="총 13개의 약국을 찾았습니다."
+            android:textColor="#ffffff"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/lists"
+            android:background="#5555"
+            android:gravity="right"
+            android:maxLines="2"
+            android:padding="3dp"
+            android:text="@string/map_help"
+            android:textColor="#FFFF"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <ListView
+            android:id="@+id/lists"
+            android:layout_width="250dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/abs__action_bar_default_height"
+            android:background="#DDFFFFFF"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>

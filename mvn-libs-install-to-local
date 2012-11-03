@@ -1,0 +1,4 @@
+mvn install:install-file -Dfile=mvn-libs/bugsense3.0.6.jar -DgroupId=com.bugsense.trace  -DartifactId=bugsense-trace -Dversion=3.0.6 -Dpackaging=jar
+mvn install:install-file -Dfile=mvn-libs/android-query-full.0.23.13-beta.jar -DgroupId=com.androidquery -DartifactId=aquery -Dversion=0.23.13-beta -Dpackaging=jar
+mvn install:install-file -Dfile=mvn-libs/libGoogleAnalyticsV2.jar -DgroupId=com.google  -DartifactId=analytics -Dversion=V2 -Dpackaging=jar
+mvn install:install-file -Dfile=$ANDROID_HOME/add-ons/addon-google_apis-google-16/libs/maps.jar -DgroupId=com.google.android.maps  -DartifactId=maps -Dversion=16_r2 -Dpackaging=jar
