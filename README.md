@@ -3,6 +3,12 @@
 
 현위치 기반으로 대한약사회 홈페이지의 당번약국 정보를 가져와 지도위에 표시해줍니다. 
 
+
+## Install
+당번약국앱은 Google Play에서 설치하실 수 있습니다.
+
+[![Get it on Google Play](http://www.android.com/images/brand/get_it_on_play_logo_small.png)](http://play.google.com/store/apps/details?id=com.alanjeon.dutypharm)
+
 Build
 -----
 
