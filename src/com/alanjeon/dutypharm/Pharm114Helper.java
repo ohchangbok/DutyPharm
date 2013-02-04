@@ -12,8 +12,10 @@ import com.google.i18n.phonenumbers.Phonenumber;
 
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -172,11 +174,26 @@ public class Pharm114Helper {
 
         Map<String, Object> params = new HashMap<String, Object>();
         params.put("search_first", "T");
-        params.put("realtime_TF", "T");
         params.put("ss_key", ssKey);
         params.put("addr1", nomalizeCityName(addrs[0]));
         params.put("addr2", addrs[1]);
         params.put("addr3", addrs[2]);
+
+        Calendar calendar = Calendar.getInstance(Locale.KOREA);
+        params.put("m_year", calendar.get(Calendar.YEAR));
+        params.put("m_month", calendar.get(Calendar.MONTH));
+        params.put("m_day", calendar.get(Calendar.DAY_OF_MONTH));
+
+        int hour = calendar.get(Calendar.HOUR_OF_DAY);
+        int min = calendar.get(Calendar.MINUTE);
+
+        if (min < 30) {
+            params.put("time_s1", String.format("%02d:%02d", hour, 0));
+            params.put("time_e1", String.format("%02d:%02d", hour, 30));
+        } else {
+            params.put("time_s1", String.format("%02d:%02d", hour, 30));
+            params.put("time_e1", String.format("%02d:%02d", (hour + 1) % 24, 0));
+        }
         params.put("image2.x", ((int) Math.random()) % 20);
         params.put("image2.y", ((int) Math.random()) % 20);
 
